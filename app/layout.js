@@ -104,7 +104,6 @@ export default function RootLayout({ children }) {
             <Footer />
           </ThemeProvider>
         </LoadingWrapper>
-        {children}
         <Analytics />
       </body>
     </html>

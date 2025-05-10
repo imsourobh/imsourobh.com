@@ -96,7 +96,7 @@ export default function Banner() {
             transition={{ duration: 0.5, delay: 1.4 }}
           >
             <span className="text-text-secondary">
-              I don't just find bugs, I create them too!
+              I don&apos;t just find bugs, I create them too!
             </span>
           </motion.h2>
     </div>

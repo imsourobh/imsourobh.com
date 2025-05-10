@@ -8,8 +8,6 @@ import { geistMono, geistSans, incognito } from "./fonts/font";
 import "./globals.css";
 import LoadingWrapper from "./LoadingWrapper";
 
-// app/layout.tsx
-import { Analytics } from '@vercel/analytics/react';
 
 export const metadata = {
   title: "imsourobh",
@@ -49,6 +47,7 @@ export const metadata = {
   "cybersecurity student"
 ]
 
+
   openGraph: {
     type: "website",
     url: "https://imsourobh.com",
@@ -67,7 +66,7 @@ export const metadata = {
   },
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning={true}>
       <body
@@ -78,7 +77,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <ThemeProvider
             enableSystem
             attribute="class"
-            defaultTheme="dark"
+            defaultTheme="light"
             themes={[
               "light",
               "dark",
@@ -93,17 +92,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <StickyNav />
 
             <Spotlight
-              className="top-40 left-0 md:left-96 md:top-0 z-50"
+              className="top-40 left-0 md:left-96 md:top-0 z-50  "
               fill="rgba(16, 163, 233, .7)"
             />
 
-            <main className="mx-auto max-container px-4">{children}</main>
+            <main className="mx-auto max-container  px-4">{children}</main>
             <Socials direction="col" position="fixed" />
             <ScrollToTopButton />
             <Footer />
           </ThemeProvider>
         </LoadingWrapper>
-        <Analytics />
       </body>
     </html>
   );

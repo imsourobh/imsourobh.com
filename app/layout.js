@@ -11,17 +11,6 @@ import LoadingWrapper from "./LoadingWrapper";
 // app/layout.tsx
 import { Analytics } from '@vercel/analytics/react';
 
-export default function RootLayout({ children }) {
-  return (
-    <html lang="en">
-      <body>
-        {children}
-        <Analytics />
-      </body>
-    </html>
-  );
-}
-
 
 export const metadata = {
   title: "imsourobh",
@@ -78,12 +67,14 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+
   return (
     <html lang="en" suppressHydrationWarning={true}>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${incognito.variable} relative scroll-smooth antialiased text-primary bg-background-secondary overflow-x-hidden`}
         suppressHydrationWarning={true}
       >
+
         <LoadingWrapper>
           <ThemeProvider
             enableSystem
@@ -113,6 +104,8 @@ export default function RootLayout({ children }) {
             <Footer />
           </ThemeProvider>
         </LoadingWrapper>
+        {children}
+        <Analytics />
       </body>
     </html>
   );
